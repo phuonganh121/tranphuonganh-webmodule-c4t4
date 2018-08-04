@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Movie list</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    {% for movie in movies %}
+        <h2>Title: {{movie.title}}</h2> 
+        <h2>Casts: {{movie.casts}}</h2>
+        <img
+            src="{{movie.thumbnail_url}}" 
+            alt="Ant Man 2">
+        <a href="https://www.forbes.com/forbes/welcome/?toURL=https://www.forbes.com/sites/scottmendelson/2018/07/20/ant-man-and-the-wasp-nears-150m-as-jurassic-world-2-passes-major-box-office-milestone/&refURL=https://www.google.com/&referrer=https://www.google.com/">Ant Man and the Wasp</a>
+    {% endfor %}
+    </body>
+</html>

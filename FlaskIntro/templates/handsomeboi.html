@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Handsome Boi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    {% for handsomeboi in handsomebois %}
+        <h2>Name: {{handsomeboi.name}}</h2>
+        <h2>Age: {{handsomeboi.age}}</h2>
+        <img 
+            src="{{handsomeboi.thumbnail_url}}" 
+            alt="{{handsomeboi.alt}}">
+    {% endfor %}
+
+</body>
+</html>

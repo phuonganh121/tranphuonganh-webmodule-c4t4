@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Movie Gallery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    {% for hobby in hobbies %}
+        <div>
+                <h3>{{hobby.title}}</h3>
+                <img src="{{hobby.image_url}}" alt="{{hobby.title}}">
+                <a href="{{hobby.link}}">Watch</a>
+
+        </div>
+    {% endfor %}
+</body>
+</html>
