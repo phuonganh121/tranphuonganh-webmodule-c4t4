@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Healthy Foodie</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <div id = "root">
+        <div id = "header">
+            <h2>Healthy Foodie</h2>
+        </div>
+
+        <div id = "season">
+            <h3>{{item.season}}</h3>
+        </div>
+        
+        <div id="page-content">
+            <div class = "left-collumn">
+                <div class = "collumn-title">
+                    <h2>Sáng</h2>
+                </div>
+
+                <div class = "column-content">
+                    {% for item in items %} 
+                        <div class="column-item">
+                        <img src="{{item.image_url}}" alt="{{item.title}}">
+                        <h3 href = "{{item.link}}">{{item.title}}</h3>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class = "middle-collumn">
+                <div class = "collumn-title">
+                    <h2>Sáng</h2>
+                </div>
+        
+                <div class = "column-content">
+                    {% for item in items %} 
+                        <div class="column-item">
+                            <img src="{{item.image_url}}" alt="{{item.title}}">
+                            <h3 href = "{{item.link}}">{{item.title}}</h3>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class = "left-collumn">
+                <div class = "collumn-title">
+                    <h2>Sáng</h2>
+                </div>
+            
+                <div class = "column-content">
+                    {% for item in items %} 
+                        <div class="column-item">
+                            <img src="{{item.image_url}}" alt="{{item.title}}">
+                            <h3 href = "{{item.link}}">{{item.title}}</h3>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
