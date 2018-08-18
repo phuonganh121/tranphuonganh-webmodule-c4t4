@@ -1,21 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Movie Gallery</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Movie gallery</title>
+  <link rel="stylesheet" href="../static/index.css">
 </head>
-<body>
-    {% for movie in movies %}
-        <div>
-                <h3>{{movie.title}}</h3>
-                <img src="{{movie.image_url}}" alt="{{movie.title}}">
-                <a href="{{movie.link}}">Watch</a>
 
-        </div>
-    {% endfor %}
+<body>
+  <div id = "root">
+    <div id = "sidebar">
+      <ul class="unstyled">
+        <li class="panel-item">Trending movies</li>
+        <li class="panel-item">History</li>
+        <li class="panel-item">My collection</li>
+        <li class="panel-item">Subscriptions</li>
+      </ul>
+    </div>
+    <div id = "main_panel">
+      <div class="title">
+        <h1>Trending movies</h1>
+      </div>
+      <div id="movie_list">
+        {% for movie in movies %} 
+          <div class="movie-item">
+            <img src="{{movie.image_url}}" alt="{{movie.title}}">
+            <h3>{{movie.title}}</h3>
+            <div>{{movie.casts}}</div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>
