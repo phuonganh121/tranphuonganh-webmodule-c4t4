@@ -10,7 +10,17 @@ mlab.connect()
 def index():
   if "username" in session:
     movie_list = Movie.objects()
-    return render_template("index.html", movies=movie_list)
+    count = 0
+    list_empty = []
+    for movie in movie_list:
+      count += 1
+      if count < 2 :
+        list_empty.append(movie)
+      else:
+        break
+    print (list_empty)
+
+    return render_template("index.html", movies=list_empty)
   else: 
     return redirect('/login')
 
