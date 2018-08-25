@@ -32,27 +32,21 @@
         <div id="post-container">
             <h2 id="post-title">Món ăn</h2>
             <div id="post-content">
-                <img src="https://via.placeholder.com/700x400" alt="Món ăn">
-                <h4>Nguyên liệu: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus dolorem facere vel reprehenderit, beatae unde quo eaque! Reiciendis tempora voluptate odit sed velit, qui placeat provident accusamus quam corrupti ipsum.</h4>
-                <h4>Cách làm: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil numquam mollitia quaerat quidem quae eum exercitationem, unde quod iste fugiat impedit sint ex esse quam porro repellat animi vero accusantium.</h4>
+                <img src="{{item.img}}" alt="Món ăn">
+                <h4>Nguyên liệu: {{item.nguyenlieu}}</h4>
+                <h4>Cách làm: {{item.cachlam}}</h4>
             </div>
         </div>
 
         <div id="side-column">
             <h2>Có thể bạn quan tâm</h2>
+            {% for item in items %}
             <div class="side-column-item">
-                <img src="https://via.placeholder.com/140x100" alt="Món ăn">
-                <h3>Món ăn</h3>
+                <img src="{{item.img}}" alt="Món ăn">
+                <h3>{{item.title}}</h3>
             </div>
+            {% endfor %}
 
-            <div class="side-column-item">
-                <img src="https://via.placeholder.com/140x100" alt="Món ăn">
-                <h3>Món ăn</h3>
-            </div>
-
-            <div class="side-column-item">
-                <img src="https://via.placeholder.com/140x100" alt="Món ăn">
-                <h3>Món ăn</h3>
             </div>
         </div>
     </div>
