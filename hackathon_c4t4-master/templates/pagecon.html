@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Healthy Foodie</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <div id = "root">
+        <div id = "header">
+            <h1>Healthy Foodie</h1>
+        </div>
+
+        <div id = "season">
+            <h1>Xuân</h1>
+        </div>
+
+        <div id="page-content">
+            <div class = "left-collumn">
+                <div class = "left-collumn-title">
+                            <h2>Sáng</h2>
+                        </div>
+        
+                    <div class = "left-column-content"> 
+                        {% for item in items %} 
+                            <div class="column-item">
+                                    <img src="{{item.img}}" alt="{{item.title}}">
+                                    <h3 href = "{{item.link}}">{{item.title}}</h3>
+                    </div>
+                {% endfor %}
+            </div>
+
+            <!-- <div class = "left-collumn">
+                <div class = "left-collumn-title">
+                    <h2>Sáng</h2>
+                </div>
+
+                <div class = "left-column-content"> 
+                    {% for item in items %} 
+                        <div class="column-item">
+                            <img src="{{item.image_url}}" alt="{{item.title}}">
+                            <h3 href = "{{item.link}}">{{item.title}}</h3>
+                        </div>
+                    {% endfor %}
+                </div>
+
+            <div class = "middle-collumn">
+                <div class = "middle-collumn-title">
+                    <h1>Trưa</h1>
+                </div>
+        
+                <div class = "middle-column-item"></div>
+                    {% for item in items %} 
+                        <div class="column-item">
+                            <img src="{{item.image_url}}" alt="{{item.title}}">
+                            <h3 href = "{{item.link}}">{{item.title}}</h3>
+                        </div>
+                    {% endfor %}
+            </div>
+
+            <div class = "right-collumn">
+                <div class = "right-collumn-title">
+                    <h1>Tối</h1>
+                </div>
+            
+                <div class = "right-column-item"></div>
+                    {% for item in items %} 
+                        <div class="column-item">
+                            <img src="{{item.image_url}}" alt="{{item.title}}">
+                            <h3 href = "{{item.link}}">{{item.title}}</h3>
+                        </div>
+                    {% endfor %}
+            </div> -->
+
+        </div>
+    </div>
+
+</body>
+</html>
